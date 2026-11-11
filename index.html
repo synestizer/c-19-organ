@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta
+      name="description"
+      content="Watch the C-19 web movie."
+    >
+    <title>C-19 — Webmovie</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open project information"
+        aria-controls="site-menu"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span class="menu-toggle__icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <nav class="site-menu" id="site-menu" aria-label="Project information" hidden>
+        <p class="eyebrow">C-19 · Inflatable organ</p>
+        <h2>A sound you can walk into.</h2>
+        <p>
+          A large, air-filled organ that turns its surroundings into a changing
+          acoustic space.
+        </p>
+        <dl class="project-facts">
+          <div>
+            <dt>Diameter</dt>
+            <dd>8 metres</dd>
+          </div>
+          <div>
+            <dt>Sound points</dt>
+            <dd>36 air-fed spikes</dd>
+          </div>
+          <div>
+            <dt>Inside</dt>
+            <dd>10–15 visitors</dd>
+          </div>
+          <div>
+            <dt>Maximum sound level</dt>
+            <dd>80 dBA</dd>
+          </div>
+        </dl>
+        <p class="site-menu__credits">
+          By Kaspar König, made with Jope Schneider. First presented with EAR
+          in Switzerland in 2023.
+        </p>
+        <ul class="site-menu__links">
+          <li><a href="#story">The work</a></li>
+          <li><a href="#credits">Credits &amp; contact</a></li>
+          <li>
+            <a href="https://ear.education/" target="_blank" rel="noopener noreferrer">
+              EAR · Environmental Artistic Research
+            </a>
+          </li>
+          <li>
+            <a href="https://www.kasparkoenig.com/" target="_blank" rel="noopener noreferrer">
+              Kaspar König
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="experience" id="story" data-experience>
+        <div class="experience__stage">
+          <section class="film-screen" aria-label="C-19 web movie">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="C-19 Webmovie 2"
+              data-film
+            >
+              <source src="C-19_website_webmovV2.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+          </section>
+          <section
+            class="story"
+            aria-labelledby="story-title"
+            data-crawl
+          >
+            <div class="crawl__text" data-crawl-text>
+              <h1 id="story-title">C-19: The inflatable organ</h1>
+              <p>
+                An eight-metre globe becomes an organ you can enter. Thirty-six
+                outward spikes guide air through 3D-printed flutes and organ
+                pipes, each shaped to sound at a different pitch.
+              </p>
+              <p>
+                Walk around the structure and the sound shifts with your angle
+                of approach. Step inside and its permeable skin turns the globe
+                into an echo room: a place to listen, gather and inhabit sound
+                together.
+              </p>
+              <p>
+                C-19 grew from artist Kaspar König’s response to the aftermath
+                of COVID-19. Made with Jope Schneider, the inflatable was
+                presented with EAR — Environmental Artistic Research — in
+                Switzerland in 2023, then travelled to Hong Kong.
+              </p>
+              <p>
+                Designed for indoor and outdoor settings, C-19 can welcome 10
+                to 15 people inside at a time. Concerts, projections and
+                performances can unfold within it. Outdoor presentations
+                depend on the weather: rain can make the structure too heavy
+                to inflate.
+              </p>
+              <p>
+                The organ’s sound is omnipresent, not overwhelming: its level
+                does not exceed 80 dBA. Every visit offers a different point
+                of listening.
+              </p>
+            </div>
+            <div class="crawl__fade" aria-hidden="true"></div>
+          </section>
+        </div>
+      </section>
+      <section class="credits" id="credits" aria-labelledby="credits-title">
+        <p class="eyebrow">C-19 · Inflatable organ</p>
+        <h2 id="credits-title">A space for listening together.</h2>
+        <p>Concept and design by Kaspar König. Made with Jope Schneider.</p>
+        <p>
+          For collaborations, performances or more about the project, visit
+          <a href="https://ear.education/" target="_blank" rel="noopener noreferrer">EAR</a>
+          or
+          <a href="https://www.kasparkoenig.com/" target="_blank" rel="noopener noreferrer">
+            Kaspar König
+          </a>.
+        </p>
+      </section>
+    </main>
+    <svg class="svg-filters" aria-hidden="true" focusable="false">
+      <filter
+        id="fisheye-filter"
+        x="-25%"
+        y="-25%"
+        width="150%"
+        height="150%"
+        color-interpolation-filters="sRGB"
+      >
+        <feImage
+          id="fisheye-map"
+          x="0%"
+          y="0%"
+          width="100%"
+          height="100%"
+          preserveAspectRatio="none"
+          result="displacement-map"
+        ></feImage>
+        <feDisplacementMap
+          id="fisheye-displacement"
+          in="SourceGraphic"
+          in2="displacement-map"
+          scale="0"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        ></feDisplacementMap>
+      </filter>
+    </svg>
+    <script src="script.js" defer></script>
+  </body>
+</html>
